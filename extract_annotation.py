@@ -9,7 +9,6 @@ import re
 class AnnotationExtractor:
     def __init__(self, elan_file_name, wordforms):
         self.elan_file_name = elan_file_name
-        self.IDENTIFY_AS_STEM_LIMIT = 3
         self.elan_parser = etree.XMLParser(ns_clean=True, recover=True, encoding='utf-8')
         self.elan_tree = fromstring(
             open(self.elan_file_name, encoding='utf-8').read().encode('utf-8'),
