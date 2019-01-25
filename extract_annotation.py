@@ -42,7 +42,7 @@ class AnnotationExtractor:
         for n, token in enumerate(morph):
             w = etree.Element("w")
             token_gloss = gloss[n]
-            token_gloss = re.sub(r'\[(.+)?\]', '.\g<1>', token_gloss)
+            token_gloss = re.sub(r'\[(.+?)\]', '.\g<1>', token_gloss)
             try:
                 wordform = mansi[n]
             except IndexError:
